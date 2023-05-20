@@ -74,7 +74,7 @@ app.post('/book/:id',async(req,res)=>{
 
           await Booking.findOneAndDelete({id:req.params.id}).exec()
           
-
+           
           await  arenaExist.save()
             
             console.log('booking deleted')
