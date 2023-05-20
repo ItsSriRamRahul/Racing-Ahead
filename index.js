@@ -72,7 +72,7 @@ app.post('/book/:id',async(req,res)=>{
        setTimeout(async()=>{
             timeSlot.available=true
 
-          await Booking.findOneAndDelete({id:req.params.id}).exec()
+          await Booking.findOneAndDelete({id:req.params.id ,OTP:OTP}).exec()
           
            
           await  arenaExist.save()
